@@ -1,8 +1,13 @@
 <script>
     import { Link } from 'svelte-navigator';
+    import { mode } from '../stores/darkModeStore';
+
+    let toggleDarkMode = () => {
+        console.log('toggling dark mode');
+    };
 </script>
 
-<nav class="flex w-full items-center justify-between overflow-x-hidden pt-3">
+<nav class="flex w-full items-center justify-between overflow-x-hidden pt-5">
     <img
         src="./src/assets/alphabit_logo_no_text.png"
         alt="alphabit logo"
@@ -18,14 +23,18 @@
         <li><Link to="/about">about</Link></li>
     </ul>
 
-    <button class="ml-5 rounded-l-2xl border border-gray-200 px-2 py-1">
+    <button class="ml-5 rounded-l-2xl bg-blue-300 px-2 py-1 dark:bg-gray-700">
         <label class="swap-rotate swap">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" />
 
             <!-- sun icon -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
-                class="swap-on h-7 w-7 fill-current"
+                on:click={toggleDarkMode}
+                class="swap-on h-7 w-7 translate-y-1 fill-current"
+                style="--tw-translate-y: 2px;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 ><path
@@ -34,8 +43,12 @@
             >
 
             <!-- moon icon -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
-                class="swap-off h-7 w-7 fill-current"
+                on:click={toggleDarkMode}
+                class="swap-off h-7 w-7 translate-y-1 fill-current"
+                style="--tw-translate-y: 2px;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 ><path
