@@ -2,28 +2,59 @@
     import { Link } from 'svelte-navigator';
     import { mode } from '../stores/darkModeStore';
 
+    let myPage = document.getElementsByTagName('html');
     let toggleDarkMode = () => {
-        console.log('toggling dark mode');
+        myPage[0].className = $mode == 'dark' ? '' : 'dark';
+        $mode = myPage[0].className;
     };
 </script>
 
 <nav class="flex w-full items-center justify-between overflow-x-hidden pt-5">
-    <img
-        src="./src/assets/alphabit_logo_no_text.png"
-        alt="alphabit logo"
-        class="h-16 px-52 dark:invert"
-    />
-    <ul
-        class="flex w-full items-center justify-around text-lg font-semibold text-gray-900 dark:text-white"
-    >
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/events">Events</Link></li>
-        <li><Link to="/partners">partners</Link></li>
-        <li><Link to="/blog">our blog</Link></li>
-        <li><Link to="/about">about</Link></li>
-    </ul>
+    <div class="flex w-full items-center justify-around">
+        <img
+            src="./src/assets/alphabit_logo_no_text.png"
+            alt="alphabit logo"
+            class="h-20 dark:invert"
+        />
+        <ul
+            class="flex items-center justify-center gap-16 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+            <li class="group relative">
+                <Link to="/">Home</Link>
+                <span
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                />
+            </li>
+            <li class="group relative">
+                <Link to="/events">Events</Link>
+                <span
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                />
+            </li>
+            <li class="group relative">
+                <Link to="/partners">partners</Link>
+                <span
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                />
+            </li>
+            <li class="group relative">
+                <Link to="/blog">our blog</Link>
+                <span
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                />
+            </li>
+            <li class="group relative">
+                <Link to="/about">about</Link>
+                <span
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                />
+            </li>
+        </ul>
+    </div>
 
-    <button class="ml-5 rounded-l-2xl bg-blue-300 px-2 py-1 dark:bg-gray-700">
+    <button
+        class="ml-5 rounded-l-2xl bg-indigo-300 py-1 pr-1 pl-2 dark:bg-gray-700"
+    >
         <label class="swap-rotate swap">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" />
@@ -32,8 +63,8 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
                 on:click={toggleDarkMode}
-                class="swap-on h-7 w-7 translate-y-1 fill-current"
-                style="--tw-translate-y: 2px;
+                class="swap-on h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
+                style="--tw-translate-y: 3px;
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -46,8 +77,8 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
                 on:click={toggleDarkMode}
-                class="swap-off h-7 w-7 translate-y-1 fill-current"
-                style="--tw-translate-y: 2px;
+                class="swap-off h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
+                style="--tw-translate-y: 3px;
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
