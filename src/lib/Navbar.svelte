@@ -17,36 +17,36 @@
             class="h-20 dark:invert"
         />
         <ul
-            class="flex items-center justify-center gap-16 text-lg font-semibold text-gray-900 dark:text-white"
+            class="flex items-center justify-center gap-10 text-lg font-semibold capitalize text-gray-900 dark:text-white"
         >
-            <li class="group relative">
+            <li class="group relative cursor-pointer px-2">
                 <Link to="/">Home</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
                 />
             </li>
-            <li class="group relative">
+            <li class="group relative cursor-pointer px-2">
                 <Link to="/events">Events</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
                 />
             </li>
-            <li class="group relative">
+            <li class="group relative cursor-pointer px-2">
                 <Link to="/partners">partners</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
                 />
             </li>
-            <li class="group relative">
+            <li class="group relative cursor-pointer px-2">
                 <Link to="/blog">our blog</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
                 />
             </li>
-            <li class="group relative">
+            <li class="group relative cursor-pointer px-2">
                 <Link to="/about">about</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-blue-400 transition-all group-hover:w-full"
+                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
                 />
             </li>
         </ul>
