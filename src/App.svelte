@@ -1,20 +1,38 @@
 <script>
-    //importing Modules
+    // importing Modules
     // @ts-nocheck
     import { Router, Route, Link } from 'svelte-navigator';
 
-    //importing components
+    // importing components
     import Navbar from './lib/Navbar.svelte';
+
+    // importing routes
+    import About from './routes/About.svelte';
+    import Blog from './routes/Blog.svelte';
+    import Events from './routes/Events.svelte';
+    import Home from './routes/Home.svelte';
+    import Partners from './routes/Partners.svelte';
 </script>
 
 <Router>
     <main class="flex min-h-screen flex-col items-center justify-between">
         <Navbar />
 
-        <main>
-            <!-- here goes all the routes & their components inside -->
-            here the routes (main content)
-        </main>
+        <Route path="/">
+            <Home />
+        </Route>
+        <Route path="/events">
+            <Events />
+        </Route>
+        <Route path="/partners">
+            <Partners />
+        </Route>
+        <Route path="/blog">
+            <Blog />
+        </Route>
+        <Route path="/about">
+            <About />
+        </Route>
 
         <footer>
             <!-- here goes the footer -->
