@@ -1,1 +1,8 @@
-this is about route
+<script>
+    import UnderMaintenance from '../lib/UnderMaintenance.svelte';
+</script>
+
+<UnderMaintenance />
+<div class="my my-10 text-4xl font-medium text-gray-900 dark:text-gray-100">
+    About Route is Under Maintenance
+</div>
