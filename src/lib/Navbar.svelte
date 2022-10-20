@@ -9,7 +9,9 @@
     };
 </script>
 
-<nav class="flex w-full items-center justify-between overflow-x-hidden pt-5">
+<nav
+    class="flex w-full select-none items-center justify-between overflow-x-hidden pt-5"
+>
     <div class="flex w-full items-center justify-around">
         <img
             src="./src/assets/alphabit_logo_no_text.png"
