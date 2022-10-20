@@ -8,7 +8,7 @@
         class="col-span-3 flex items-center justify-start pl-24 text-8xl text-gray-900 dark:text-gray-100"
     >
         <div class="flex flex-col gap-4">
-            <h1>Alphabit is</h1>
+            <div>Alphabit is</div>
             <Identity />
         </div>
     </div>

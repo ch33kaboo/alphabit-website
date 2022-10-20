@@ -43,7 +43,7 @@
     });
 </script>
 
-<div class="scale-75 overflow-visible md:scale-100">
+<div class="scale-75 overflow-visible drop-shadow-lg md:scale-100">
     <canvas bind:this={canvas} width={330} height={430} />
 </div>
 
