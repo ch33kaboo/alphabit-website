@@ -7,9 +7,14 @@
     <div
         class="col-span-3 flex w-full items-center text-5xl text-gray-900 dark:text-gray-100 sm:text-7xl md:text-8xl lg:justify-start lg:pl-16 lg:text-7xl xl:pl-24 xl:text-8xl"
     >
-        <div class="flex w-full flex-col gap-4 lg:w-auto">
-            <div class="flex items-center justify-center lg:block">
-                Alphabit is
+        <div class="flex w-full flex-col gap-3 lg:w-auto">
+            <div class="flex items-center justify-center gap-4 lg:block">
+                <div
+                    class="inline bg-gradient-to-r from-indigo-800 to-blue-700 bg-clip-text py-2 text-transparent dark:from-cyan-500 dark:to-green-400"
+                >
+                    Alphabit
+                </div>
+                <div class="inline">is</div>
             </div>
             <div class="flex items-center justify-center lg:block">
                 <Identity />
