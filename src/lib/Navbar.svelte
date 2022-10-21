@@ -1,5 +1,6 @@
 <script>
     import { Link } from 'svelte-navigator';
+    import { useLocation } from 'svelte-navigator';
     import { mode } from '../stores/darkModeStore';
 
     // importing assets
@@ -10,6 +11,8 @@
         myPage[0].className = $mode == 'dark' ? '' : 'dark';
         $mode = myPage[0].className;
     };
+
+    const location = useLocation();
 </script>
 
 <nav
@@ -59,31 +62,46 @@
             <li class="group relative cursor-pointer px-2">
                 <Link to="/">Home</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
+                    class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
+                    '/'
+                        ? 'w-full'
+                        : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                 />
             </li>
             <li class="group relative cursor-pointer px-2">
                 <Link to="/events">Events</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
+                    class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
+                    '/events'
+                        ? 'w-full'
+                        : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                 />
             </li>
             <li class="group relative cursor-pointer px-2">
                 <Link to="/partners">partners</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
+                    class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
+                    '/partners'
+                        ? 'w-full'
+                        : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                 />
             </li>
             <li class="group relative cursor-pointer px-2">
                 <Link to="/blog">our blog</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
+                    class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
+                    '/blog'
+                        ? 'w-full'
+                        : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                 />
             </li>
             <li class="group relative cursor-pointer px-2">
                 <Link to="/about">about</Link>
                 <span
-                    class="absolute -bottom-1 left-0 h-1 w-0 bg-slate-900 transition-all group-hover:w-full dark:bg-blue-400"
+                    class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
+                    '/about'
+                        ? 'w-full'
+                        : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                 />
             </li>
         </ul>
