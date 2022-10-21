@@ -2,6 +2,9 @@
     import { Link } from 'svelte-navigator';
     import { mode } from '../stores/darkModeStore';
 
+    // importing assets
+    import alphabitLogo from '/src/assets/alphabit_logo_no_text.png';
+
     let myPage = document.getElementsByTagName('html');
     let toggleDarkMode = () => {
         myPage[0].className = $mode == 'dark' ? '' : 'dark';
@@ -49,11 +52,7 @@
         </label>
     </button>
     <div class="flex w-full items-center justify-around">
-        <img
-            src="./src/assets/alphabit_logo_no_text.png"
-            alt="alphabit logo"
-            class="h-20 dark:invert"
-        />
+        <img src={alphabitLogo} alt="alphabit logo" class="h-20 dark:invert" />
         <ul
             class="hidden items-center justify-center gap-10 text-lg font-semibold capitalize text-gray-900 dark:text-white lg:flex"
         >
