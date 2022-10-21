@@ -14,6 +14,5 @@
                 >{id}.</span
             >
         {/each}
-        {' '}
     </Typewriter>
 </div>

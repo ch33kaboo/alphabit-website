@@ -11,7 +11,7 @@
             <div class="flex items-center justify-center lg:block">
                 Alphabit is
             </div>
-            <div class="flex items-center justify-center pl-9 lg:block lg:pl-0">
+            <div class="flex items-center justify-center lg:block">
                 <Identity />
             </div>
         </div>
