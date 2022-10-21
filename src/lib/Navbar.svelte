@@ -12,6 +12,42 @@
 <nav
     class="flex w-full select-none items-center justify-between overflow-x-hidden pt-5"
 >
+    <button
+        class="rounded-r-2xl bg-indigo-300 py-1 pl-1 pr-2 dark:bg-gray-700 lg:hidden"
+    >
+        <label class="swap-rotate swap">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <!-- hamburger icon -->
+            <svg
+                class="swap-off h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
+                style="--tw-translate-y: 3px;
+                transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+                ><path
+                    d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                /></svg
+            >
+
+            <!-- close icon -->
+            <svg
+                style="--tw-translate-y: 3px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
+                class="swap-on h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+                ><polygon
+                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                /></svg
+            >
+        </label>
+    </button>
     <div class="flex w-full items-center justify-around">
         <img
             src="./src/assets/alphabit_logo_no_text.png"
@@ -19,7 +55,7 @@
             class="h-20 dark:invert"
         />
         <ul
-            class="flex items-center justify-center gap-10 text-lg font-semibold capitalize text-gray-900 dark:text-white"
+            class="hidden items-center justify-center gap-10 text-lg font-semibold capitalize text-gray-900 dark:text-white lg:flex"
         >
             <li class="group relative cursor-pointer px-2">
                 <Link to="/">Home</Link>
@@ -55,7 +91,7 @@
     </div>
 
     <button
-        class="ml-5 rounded-l-2xl bg-indigo-300 py-1 pr-1 pl-2 dark:bg-gray-700"
+        class="rounded-l-2xl bg-indigo-300 py-1 pr-1 pl-2 dark:bg-gray-700 lg:ml-5"
     >
         <label class="swap-rotate swap">
             <!-- this hidden checkbox controls the state -->
