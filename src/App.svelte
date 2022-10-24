@@ -5,6 +5,7 @@
 
     // importing components
     import Navbar from './lib/Navbar.svelte';
+    import Menu from './lib/Menu.svelte';
 
     // importing routes
     import About from './routes/About.svelte';
@@ -22,14 +23,7 @@
 <Router>
     <main class="flex min-h-screen flex-col items-center justify-between">
         <Navbar on:toggleMenu={toggleMenu} />
-        <!-- menu part -->
-        <div
-            class="absolute top-24 bg-black transition-all duration-1000 {menu
-                ? 'left-0'
-                : '-left-16'}"
-        >
-            hahaha
-        </div>
+        <Menu {menu} />
 
         <Route path="/">
             <Home />
