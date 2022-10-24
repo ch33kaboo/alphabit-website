@@ -4,5 +4,4 @@
     let route = 'blog';
 </script>
 
-hi
 <ContentList {route} />
