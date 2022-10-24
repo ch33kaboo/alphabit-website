@@ -12,11 +12,24 @@
     import Events from './routes/Events.svelte';
     import Home from './routes/Home.svelte';
     import Partners from './routes/Partners.svelte';
+
+    let menu = false;
+    const toggleMenu = () => {
+        menu = !menu;
+    };
 </script>
 
 <Router>
     <main class="flex min-h-screen flex-col items-center justify-between">
-        <Navbar />
+        <Navbar on:toggleMenu={toggleMenu} />
+        <!-- menu part -->
+        <div
+            class="absolute top-24 bg-black transition-all duration-1000 {menu
+                ? 'left-0'
+                : '-left-16'}"
+        >
+            hahaha
+        </div>
 
         <Route path="/">
             <Home />

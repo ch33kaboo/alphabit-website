@@ -1,7 +1,10 @@
 <script>
     import { Link } from 'svelte-navigator';
+    import { createEventDispatcher } from 'svelte';
     import { useLocation } from 'svelte-navigator';
     import { mode } from '../stores/darkModeStore';
+
+    const dispatch = createEventDispatcher();
 
     // importing assets
     import alphabitLogo from '/src/assets/alphabit_logo_no_text.png';
@@ -13,6 +16,10 @@
     let toggleDarkMode = () => {
         myPage[0].className = $mode == 'dark' ? '' : 'dark';
         $mode = myPage[0].className;
+    };
+
+    let toggleMenu = () => {
+        dispatch('toggleMenu');
     };
 
     const location = useLocation();
@@ -29,7 +36,9 @@
             <input type="checkbox" />
 
             <!-- hamburger icon -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
+                on:click={toggleMenu}
                 class="swap-off h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
                 style="--tw-translate-y: 3px;
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
@@ -43,7 +52,9 @@
             >
 
             <!-- close icon -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <svg
+                on:click={toggleMenu}
                 style="--tw-translate-y: 3px;
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));"
                 class="swap-on h-7 w-7 translate-y-1 fill-gray-800 dark:fill-slate-300"
