@@ -1,7 +1,5 @@
 <!-- this component you just give it the name of the section (events/blog so far) and it will render all available blogs/events in a cool way -->
 <script>
-    import { onMount } from 'svelte';
-
     const repo = import.meta.env.VITE_REPO;
     const owner = import.meta.env.VITE_OWNER;
     export let route;
@@ -33,22 +31,22 @@
         let array = JSON.parse(content).tree;
         i = 0;
         while (i < array.length) {
-            arr = [...arr, array[i].path];
+            arr = [
+                ...arr,
+                { path: array[i].path, time: Math.ceil(array[i].size / 1300) } // 1300 is a number I came up with, when dividing by it, you get approximately the estimated read time of that file.
+            ];
             i++;
         }
         return arr;
     };
-
-    let list;
-    onMount(() => {
-        list = getList();
-    });
 </script>
 
-{#await list}
+{#await getList()}
     waiting for the list...
-{:then list}
-    {list}
+{:then items}
+    {#each items as item}
+        <li>{item.path}. {item.time}</li>
+    {/each}
 {:catch error}
     <p class="text-red-700">{error.message}</p>
 {/await}
