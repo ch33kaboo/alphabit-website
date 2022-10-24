@@ -1,5 +1,7 @@
 <!-- this component you just give it the name of the section (events/blog so far) and it will render all available blogs/events in a cool way -->
 <script>
+    import ItemCard from '../ItemCard.svelte';
+
     const repo = import.meta.env.VITE_REPO;
     const owner = import.meta.env.VITE_OWNER;
     export let route;
@@ -42,11 +44,15 @@
 </script>
 
 {#await getList()}
-    waiting for the list...
+    <button class="btn loading">loading... please wait</button>
 {:then items}
-    {#each items as item}
-        <li>{item.path}. {item.time}</li>
-    {/each}
+    <div
+        class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3 gap-7"
+    >
+        {#each items as item}
+            <ItemCard {item} />
+        {/each}
+    </div>
 {:catch error}
     <p class="text-red-700">{error.message}</p>
 {/await}
