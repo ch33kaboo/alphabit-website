@@ -35,7 +35,11 @@
         while (i < array.length) {
             arr = [
                 ...arr,
-                { path: array[i].path, time: Math.ceil(array[i].size / 1300) } // 1300 is a number I came up with, when dividing by it, you get approximately the estimated read time of that file.
+                {
+                    index: arr.length + 1,
+                    path: array[i].path,
+                    time: `${Math.ceil(array[i].size / 1300)} min read`
+                } // 1300 is a number I came up with, when dividing by it, you get approximately the estimated read time of that file.
             ];
             i++;
         }
@@ -46,9 +50,7 @@
 {#await getList()}
     <button class="btn loading">loading... please wait</button>
 {:then items}
-    <div
-        class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3 gap-7"
-    >
+    <div class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3">
         {#each items as item}
             <ItemCard {item} />
         {/each}
