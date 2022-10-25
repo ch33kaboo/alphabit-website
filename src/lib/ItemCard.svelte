@@ -18,9 +18,19 @@
             class="col-span-3 bg-cover"
             style="background-image: url('https://placeimg.com/200/200/tech')"
         />
-        <div class="col-span-7">
-            {item.path}
-            {item.time}
+        <div class="col-span-7 px-7 py-5">
+            <div class="text-3xl capitalize">
+                {item.path.replace(/_/g, ' ').replace('.md', '')}
+            </div>
+            <div class="text-sm opacity-60">
+                {item.time}
+            </div>
+            <div class="mt-4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Tempora ad unde, odit alias dicta eius quam praesentium
+                mollitia, similique corrupti maiores libero aperiam, in
+                dignissimos.
+            </div>
         </div>
     </div>
 </div>
