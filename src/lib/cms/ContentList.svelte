@@ -52,7 +52,7 @@
 {:then items}
     <div class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3">
         {#each items as item}
-            <ItemCard {item} />
+            <ItemCard {item} {route} />
         {/each}
     </div>
 {:catch error}
