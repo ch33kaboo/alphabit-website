@@ -19,7 +19,6 @@
             class="col-span-3 bg-cover"
             style="background-image: url('https://placeimg.com/200/200/tech')"
         />
-        <!-- here do the thing -->
         <div class="col-span-7 px-7 py-5">
             <div class="flex items-center justify-between">
                 <div>
@@ -41,6 +40,5 @@
                 dignissimos.
             </div>
         </div>
-        <!-- here do the thing -->
     </div>
 </div>

@@ -28,13 +28,13 @@
         <Route path="/">
             <Home />
         </Route>
-        <Route path="/events">
+        <Route path="/events/*">
             <Events />
         </Route>
         <Route path="/partners">
             <Partners />
         </Route>
-        <Route path="/blog">
+        <Route path="/blog/*">
             <Blog />
         </Route>
         <Route path="/about">
