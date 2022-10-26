@@ -2,6 +2,15 @@
     export let item;
     export let route = 'article';
     import { fade } from 'svelte/transition';
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
+
+    let handleClick = () => {
+        dispatch('changeRoute', {
+            item: item,
+            path: item.path.replace('.md', '')
+        });
+    };
 </script>
 
 <div
@@ -20,7 +29,7 @@
             style="background-image: url('https://placeimg.com/200/200/tech')"
         />
         <div class="col-span-7 px-7 py-5">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between gap-7">
                 <div>
                     <div class="text-3xl capitalize">
                         {item.path.replace(/_/g, ' ').replace('.md', '')}
@@ -29,7 +38,8 @@
                         {item.time}
                     </div>
                 </div>
-                <div class="btn btn-accent">
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <div on:click={handleClick} class="btn btn-accent">
                     {route == 'blog' ? 'read this blog' : 'read event details'}
                 </div>
             </div>

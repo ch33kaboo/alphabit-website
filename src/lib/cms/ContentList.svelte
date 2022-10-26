@@ -1,6 +1,17 @@
 <!-- this component you just give it the name of the section (events/blog so far) and it will render all available blogs/events in a cool way -->
 <script>
     import ItemCard from '../ItemCard.svelte';
+    import { Route, useNavigate } from 'svelte-navigator';
+    const navigate = useNavigate();
+
+    import Document from '../Document.svelte';
+    let item;
+    let path;
+    const handleChangeRoute = (e) => {
+        item = e.detail.item;
+        path = e.detail.path;
+        navigate(path);
+    };
 
     const repo = import.meta.env.VITE_REPO;
     const owner = import.meta.env.VITE_OWNER;
@@ -47,14 +58,20 @@
     };
 </script>
 
-{#await getList()}
-    <button class="btn loading">loading... please wait</button>
-{:then items}
-    <div class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3">
-        {#each items as item}
-            <ItemCard {item} {route} />
-        {/each}
-    </div>
-{:catch error}
-    <p class="text-red-700">{error.message}</p>
-{/await}
+<Route path="/">
+    {#await getList()}
+        <button class="btn loading">loading... please wait</button>
+    {:then items}
+        <div class="flex flex-col items-stretch justify-center w-5/6 lg:w-2/3">
+            {#each items as item}
+                <ItemCard {item} {route} on:changeRoute={handleChangeRoute} />
+            {/each}
+        </div>
+    {:catch error}
+        <p class="text-red-700">{error.message}</p>
+    {/await}
+</Route>
+
+<Route {path}>
+    <Document {item} />
+</Route>
