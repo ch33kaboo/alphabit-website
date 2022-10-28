@@ -73,7 +73,12 @@
         <ul
             class="hidden items-center justify-center gap-10 text-lg font-semibold capitalize text-gray-900 dark:text-white lg:flex"
         >
-            <li class="group relative cursor-pointer px-2">
+            <li
+                class="group relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname ==
+                '/'
+                    ? 'opacity-100'
+                    : ''} transition-all"
+            >
                 <Link to="/">Home</Link>
                 <span
                     class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
@@ -83,7 +88,13 @@
                 />
             </li>
             {#each routesList as route}
-                <li class="group relative cursor-pointer px-2">
+                <li
+                    class="group relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname.startsWith(
+                        `/${route}`
+                    )
+                        ? 'opacity-100'
+                        : ''} transition-all"
+                >
                     <Link to="/{route}">{route}</Link>
                     <span
                         class="absolute -bottom-1 left-0 h-1 {$location.pathname.startsWith(
