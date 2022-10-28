@@ -1,8 +1,12 @@
 <script>
+    import SvelteMarkdown from 'svelte-markdown'; // to convert markdown to HTML
+    import { textEmoji } from 'markdown-to-text-emoji'; // to convert the emoji codes (:smile: for example) the MD to an HTML emoji code
+
     // importing envars
     const repo = import.meta.env.VITE_REPO;
     const owner = import.meta.env.VITE_OWNER;
 
+    // props
     export let item;
     export let route;
 
@@ -18,7 +22,11 @@
 {#await fetchDocument()}
     <button class="btn loading">loading... please wait</button>
 {:then doc}
-    {doc}
+    <article
+        class="prose prose-headings:text-slate-800 prose-strong:text-slate-800 dark:prose-headings:text-gray-200 dark:prose-strong:text-gray-200 prose-a:text-slate-800 lg:prose-xl text-slate-800 dark:prose-a:text-gray-200 dark:text-gray-200 prose-code:px-2 prose-code:py-1 prose-code:rounded-lg prose-code:text-slate-800 prose-code:bg-indigo-300 dark:prose-code:text-gray-200 dark:prose-code:bg-gray-900"
+    >
+        <SvelteMarkdown source={textEmoji(doc)} />
+    </article>
 {:catch error}
     <p class="text-red-700">{error.message}</p>
 {/await}
