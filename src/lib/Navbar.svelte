@@ -26,7 +26,7 @@
 </script>
 
 <nav
-    class="sticky top-0 z-10 flex w-full select-none items-center justify-between overflow-x-hidden bg-blue-200 bg-opacity-50 py-5 backdrop-blur-md dark:bg-gray-800 dark:bg-opacity-50"
+    class="sticky top-0 z-10 flex w-full select-none items-center justify-between overflow-x-hidden  bg-blue-200 bg-opacity-50 bg-[url('./src/assets/bg.svg')] bg-fixed bg-center py-5 backdrop-blur-md dark:bg-gray-800 dark:bg-opacity-50 dark:bg-[url('./src/assets/bg_dark.svg')]"
 >
     <button
         class="rounded-r-2xl bg-indigo-300 py-1 pl-1 pr-2 dark:bg-gray-700 lg:hidden"
