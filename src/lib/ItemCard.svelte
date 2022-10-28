@@ -1,7 +1,7 @@
 <script>
     export let item;
     export let route = 'article';
-    import { fade } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
@@ -14,7 +14,12 @@
 </script>
 
 <div
-    in:fade={{ delay: 700 * item.index + 1300 }}
+    in:fly={{
+        x: 40,
+        duration: 500,
+        delay: 200 * item.index + 1000,
+        opacity: 0
+    }}
     class="group relative mt-5 grid h-48"
 >
     <div
