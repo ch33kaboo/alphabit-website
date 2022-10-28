@@ -73,5 +73,5 @@
 </Route>
 
 <Route {path}>
-    <Document {item} />
+    <Document {item} {route} />
 </Route>
