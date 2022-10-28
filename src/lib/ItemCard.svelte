@@ -11,6 +11,14 @@
             path: item.path.replace('.md', '')
         });
     };
+
+    let hovered = false;
+    const handleHover = () => {
+        hovered = true;
+    };
+    const handleLeave = () => {
+        hovered = false;
+    };
 </script>
 
 <div
@@ -20,10 +28,12 @@
         delay: 200 * item.index + 1000,
         opacity: 0
     }}
-    class="group relative mt-5 grid h-48"
+    class="group relative mt-5 grid h-48 transition-all hover:scale-[1.013]"
 >
     <div
-        class="absolute inset-y-3 -inset-x-1 bg-gradient-to-tr from-indigo-800 to-blue-700 opacity-0 blur-xl transition-all group-hover:opacity-100 dark:from-cyan-500 dark:to-green-400"
+        class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-indigo-800 to-blue-700 opacity-0 blur-xl transition-all {hovered
+            ? 'opacity-80'
+            : ''} dark:from-cyan-500 dark:to-green-400"
     />
 
     <div
@@ -44,7 +54,13 @@
                     </div>
                 </div>
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <div on:click={handleClick} class="btn btn-accent">
+                <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+                <div
+                    on:click={handleClick}
+                    on:mouseover={handleHover}
+                    on:mouseleave={handleLeave}
+                    class="btn btn-accent"
+                >
                     {route == 'blog' ? 'read this blog' : 'read event details'}
                 </div>
             </div>
