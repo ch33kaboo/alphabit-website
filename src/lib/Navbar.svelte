@@ -86,8 +86,9 @@
                 <li class="group relative cursor-pointer px-2">
                     <Link to="/{route}">{route}</Link>
                     <span
-                        class="absolute -bottom-1 left-0 h-1 {$location.pathname ==
-                        `/${route}`
+                        class="absolute -bottom-1 left-0 h-1 {$location.pathname.startsWith(
+                            `/${route}`
+                        )
                             ? 'w-full'
                             : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
                     />
