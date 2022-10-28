@@ -23,7 +23,7 @@
     <button class="btn loading">loading... please wait</button>
 {:then doc}
     <article
-        class="prose lg:prose-xl prose-p:px-5 prose-headings:px-5 
+        class="prose lg:prose-xl prose-p:px-5 prose-img:px-5 prose-video:px-5 prose-headings:px-5 prose-table:scale-90 md:prose-table:scale-100 my-8 
         text-slate-800 dark:text-gray-200 
         prose-headings:text-slate-800 dark:prose-headings:text-gray-200 
         prose-strong:text-slate-800 dark:prose-strong:text-gray-200 
