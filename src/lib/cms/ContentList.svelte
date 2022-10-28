@@ -4,7 +4,7 @@
     import { Route, useNavigate } from 'svelte-navigator';
     const navigate = useNavigate();
 
-    import Document from '../Document.svelte';
+    import Document from './Document.svelte';
     let item;
     let path;
     const handleChangeRoute = (e) => {
