@@ -20,7 +20,9 @@
 </script>
 
 {#await fetchDocument()}
-    <button class="btn loading">loading... please wait</button>
+    <div class="flex-grow flex items-center">
+        <button class="btn loading">loading... please wait</button>
+    </div>
 {:then doc}
     <article
         class="prose lg:prose-xl prose-p:px-5 prose-img:px-5 prose-video:px-5 prose-headings:px-5 prose-table:scale-90 md:prose-table:scale-100 my-8 
