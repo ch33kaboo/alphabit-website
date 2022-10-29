@@ -9,5 +9,35 @@
     </head>
     <body
         class="bg-blue-200 bg-[url('./src/assets/bg.svg')] bg-fixed bg-center dark:bg-gray-800 dark:bg-[url('./src/assets/bg_dark.svg')]"
-    ></body>
+    >
+        <div
+            class="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center overflow-hidden"
+        >
+            <div class="flex w-[108rem] flex-none justify-end">
+                <picture
+                    ><source
+                        srcset="
+                            https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif
+                        "
+                        type="image/avif" />
+                    <img
+                        src="https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png"
+                        alt=""
+                        class="w-[71.75rem] max-w-none flex-none"
+                        decoding="async" /></picture
+                ><picture
+                    ><source
+                        srcset="
+                            https://tailwindcss.com/_next/static/media/docs-dark@30.1a9f8cbf.avif
+                        "
+                        type="image/avif" />
+                    <img
+                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
+                        alt=""
+                        class="block w-[90rem] max-w-none flex-none"
+                        decoding="async"
+                /></picture>
+            </div>
+        </div>
+    </body>
 </html>
