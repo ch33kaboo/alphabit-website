@@ -17,7 +17,7 @@
     </li>
     {#each routesList as route}
         <li class="px-2">
-            <Link to="/{route}">{route}</Link>
+            <Link to="/{route.path}">{route.path}</Link>
         </li>
     {/each}
 </div>
