@@ -1,7 +1,7 @@
 <script>
     // importing Modules
     // @ts-nocheck
-    import { Router, Route, Link } from 'svelte-navigator';
+    import { Router, Route } from 'svelte-navigator';
     import { onMount } from 'svelte';
 
     let ready = false;
