@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://alphabit.netlify.app/assets/alphabit_logo_no_text.dba4ee4f.png" width="100" />
+  <img alt="Logo" src="https://i.ibb.co/PGRfZVC/alphabit-white.png" width="100" />
 </div>
 <h1 align="center">
   Alphabit Club website
@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://alphabit.netlify.app/" target="_blank">
-    <img src="https://i.ibb.co/NLmb5CJ/alphabit-demo.jpg" />
+    <img src="https://i.ibb.co/NLmb5CJ/alphabit-demo.jpg" width="100%" />
   </a>
 </p>
 
