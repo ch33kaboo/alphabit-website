@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { mode } from '../stores/darkModeStore';
 
     let canvas;
 
@@ -23,9 +24,13 @@
                 const y = (i / canvas.width) >>> 0;
 
                 const r =
-                    64 + (128 * x) / canvas.width + 64 * Math.sin(t / 1000);
+                    ($mode == 'dark' ? 64 : 90) +
+                    (128 * x) / canvas.width +
+                    64 * Math.sin(t / ($mode == 'dark' ? 1000 : 2000));
                 const g =
-                    0 + (100 * y) / canvas.height + 64 * Math.cos(t / 1000);
+                    ($mode == 'dark' ? 64 : -50) +
+                    (128 * y) / canvas.height +
+                    64 * Math.cos(t / ($mode == 'dark' ? 1000 : 2000));
                 const b = 128;
 
                 imageData.data[p + 0] = r;
