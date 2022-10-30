@@ -2,6 +2,10 @@
     // importing Modules
     // @ts-nocheck
     import { Router, Route, Link } from 'svelte-navigator';
+    import { onMount } from 'svelte';
+
+    let ready = false;
+    onMount(() => (ready = true));
 
     // importing components
     import Navbar from './lib/Navbar.svelte';
@@ -20,30 +24,32 @@
     };
 </script>
 
-<Router>
-    <main class="flex min-h-screen flex-col items-center justify-between">
-        <Navbar on:toggleMenu={toggleMenu} />
-        <Menu {menu} />
+{#if ready}
+    <Router>
+        <main class="flex min-h-screen flex-col items-center justify-between">
+            <Navbar on:toggleMenu={toggleMenu} />
+            <Menu {menu} />
 
-        <Route path="/">
-            <Home />
-        </Route>
-        <Route path="/events/*">
-            <Events />
-        </Route>
-        <Route path="/partners">
-            <Partners />
-        </Route>
-        <Route path="/blog/*">
-            <Blog />
-        </Route>
-        <Route path="/about">
-            <About />
-        </Route>
+            <Route path="/">
+                <Home />
+            </Route>
+            <Route path="/events/*">
+                <Events />
+            </Route>
+            <Route path="/partners">
+                <Partners />
+            </Route>
+            <Route path="/blog/*">
+                <Blog />
+            </Route>
+            <Route path="/about">
+                <About />
+            </Route>
 
-        <footer>
-            <!-- here goes the footer -->
-            here the footer
-        </footer>
-    </main>
-</Router>
+            <footer>
+                <!-- here goes the footer -->
+                here the footer
+            </footer>
+        </main>
+    </Router>
+{/if}
