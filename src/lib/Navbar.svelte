@@ -5,6 +5,7 @@
     import { mode } from '../stores/darkModeStore';
     import { fly } from 'svelte/transition';
     import { onMount } from 'svelte';
+    import { quintInOut } from 'svelte/easing';
 
     let ready = false;
     onMount(() => (ready = true));
@@ -39,7 +40,8 @@
                 x: -40,
                 duration: 500,
                 delay: 550,
-                opacity: 0
+                opacity: 0,
+                easing: quintInOut
             }}
             class="rounded-r-2xl bg-indigo-300 py-1 pl-1 pr-2 dark:bg-gray-700 lg:hidden"
         >
@@ -86,7 +88,8 @@
                     y: -40,
                     duration: 500,
                     delay: 300,
-                    opacity: 0
+                    opacity: 0,
+                    easing: quintInOut
                 }}
                 src={alphabitLogo}
                 alt="alphabit logo"
@@ -100,7 +103,8 @@
                         y: -40,
                         duration: 500,
                         delay: 340,
-                        opacity: 0
+                        opacity: 0,
+                        easing: quintInOut
                     }}
                     class="group relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname ==
                     '/'
@@ -121,7 +125,8 @@
                             y: -40,
                             duration: 500,
                             delay: 380 + route.index * 40,
-                            opacity: 0
+                            opacity: 0,
+                            easing: quintInOut
                         }}
                         class="group relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname.startsWith(
                             `/${route.path}`
@@ -147,7 +152,8 @@
                 x: 40,
                 duration: 500,
                 delay: 550,
-                opacity: 0
+                opacity: 0,
+                easing: quintInOut
             }}
             class="rounded-l-2xl bg-indigo-300 py-1 pr-1 pl-2 dark:bg-gray-700 lg:ml-5"
         >
