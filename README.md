@@ -13,7 +13,11 @@
   </a>
 </p>
 
-![demo](https://i.ibb.co/NLmb5CJ/alphabit-demo.jpg)
+<p align="center">
+  <a href="https://alphabit.netlify.app/" target="_blank">
+    <img src="https://i.ibb.co/NLmb5CJ/alphabit-demo.jpg" />
+  </a>
+</p>
 
 ## 🚨 Forking this repo (please read!)
 
