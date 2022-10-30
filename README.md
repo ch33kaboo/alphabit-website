@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://alphabit.netlify.app/" target="_blank">
-    <img src="https://i.ibb.co/NLmb5CJ/alphabit-demo.jpg" width="100%" />
+    <img src="https://i.postimg.cc/0N03RZDk/alphabit-screenshot.png" width="100%" />
   </a>
 </p>
 
