@@ -1,5 +1,8 @@
 <script>
     import { useNavigate, useLocation } from 'svelte-navigator';
+    import { fly } from 'svelte/transition';
+    import { quintInOut } from 'svelte/easing';
+
     const navigate = useNavigate();
     const location = useLocation();
     console.log($location.pathname.split('/').filter((n) => n !== ''));
@@ -12,6 +15,13 @@
 </script>
 
 <div
+    in:fly={{
+        y: 30,
+        duration: 500,
+        delay: 600,
+        opacity: 0,
+        easing: quintInOut
+    }}
     class="mt-1 mb-3 flex items-center justify-start text-gray-800 dark:text-blue-200"
 >
     <div
