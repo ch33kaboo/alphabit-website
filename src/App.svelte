@@ -10,6 +10,7 @@
     // importing components
     import Navbar from './lib/Navbar.svelte';
     import Menu from './lib/Menu.svelte';
+    import Footer from './lib/Footer.svelte';
 
     // importing routes
     import About from './routes/About.svelte';
@@ -46,10 +47,7 @@
                 <About />
             </Route>
 
-            <footer>
-                <!-- here goes the footer -->
-                here the footer
-            </footer>
+            <Footer />
         </main>
     </Router>
 {/if}
