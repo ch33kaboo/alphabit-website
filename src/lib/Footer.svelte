@@ -1,4 +1,4 @@
-<div class="w-full">
+<div class="mt-8 w-full">
     <svg
         preserveAspectRatio="none"
         class="translate-y-0 bg-fixed bg-center fill-slate-900 opacity-10 backdrop-blur-md dark:fill-gray-700 dark:opacity-50"
