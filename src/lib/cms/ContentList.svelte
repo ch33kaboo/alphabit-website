@@ -59,7 +59,9 @@
     };
 </script>
 
-<div class="flex w-full flex-grow flex-col items-center justify-start">
+<div
+    class="flex min-h-[500px] w-full flex-grow flex-col items-center justify-start"
+>
     <div class="w-5/6 lg:w-2/3">
         <Breadcrumb />
     </div>

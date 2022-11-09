@@ -22,7 +22,7 @@
 </script>
 
 {#await fetchDocument()}
-    <div class="flex-grow flex items-center">
+    <div class="flex-grow flex items-center min-h-[500px]">
         <button class="btn loading">loading... please wait</button>
     </div>
 {:then doc}
