@@ -40,7 +40,7 @@
         }}
         class="rounded-r-2xl bg-indigo-300 py-1 pl-1 pr-2 dark:bg-gray-700 lg:hidden"
     >
-        <label class="swap-rotate swap">
+        <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" />
 

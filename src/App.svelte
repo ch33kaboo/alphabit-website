@@ -11,6 +11,7 @@
     import Navbar from './lib/Navbar.svelte';
     import Menu from './lib/Menu.svelte';
     import Footer from './lib/Footer.svelte';
+    import Modal from './lib/Modal.svelte';
 
     // importing routes
     import About from './routes/About.svelte';
@@ -22,6 +23,12 @@
     let menu = false;
     const toggleMenu = () => {
         menu = !menu;
+    };
+
+    let showModal = () => {
+        const modal = document.getElementById('my-modal');
+        modal.checked = true;
+        console.log(modal.checked);
     };
 </script>
 
@@ -47,7 +54,8 @@
                 <About />
             </Route>
 
-            <Footer />
+            <Footer on:showModal={showModal} />
+            <Modal />
         </main>
     </Router>
 {/if}
