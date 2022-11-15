@@ -19,7 +19,7 @@
                     ><a
                         class="hover:underline"
                         href="https://www.linkedin.com/in/chakib-ouzane/"
-                        >linkedin.com/in/chakib-ouzane</a
+                        target="_blank">linkedin.com/in/chakib-ouzane</a
                     >
                 </p>
 
@@ -53,7 +53,7 @@
                     ><a
                         class="hover:underline"
                         href="https://github.com/ch33kaboo"
-                        >github.com/ch33kaboo</a
+                        target="_blank">github.com/ch33kaboo</a
                     >
                 </p>
             </div>
