@@ -1,3 +1,8 @@
+<script>
+    // importing assets
+    import alphabitLogo from '/src/assets/alphabit_logo_no_text.png';
+</script>
+
 <div class="mt-8 w-full">
     <svg
         preserveAspectRatio="none"
@@ -9,8 +14,41 @@
     >
 
     <footer
-        class="flex h-64 w-full select-none items-center justify-between overflow-x-hidden  bg-slate-900 bg-opacity-10 bg-[url('./src/assets/bg.svg')] bg-fixed bg-center backdrop-blur-md dark:bg-gray-700 dark:bg-opacity-50 dark:bg-[url('./src/assets/bg_dark.svg')]"
+        class="flex w-full flex-col items-stretch justify-start gap-10 bg-slate-900 bg-opacity-10 bg-[url('./src/assets/bg.svg')] bg-fixed bg-center pb-7 backdrop-blur-md dark:bg-gray-700 dark:bg-opacity-50 dark:bg-[url('./src/assets/bg_dark.svg')]"
     >
-        here goes footer content
+        <div
+            class="flex grid-cols-3 flex-col items-center justify-center sm:grid"
+        >
+            <!-- here footer content -->
+            <div class="flex items-center justify-center">
+                <img
+                    src={alphabitLogo}
+                    alt="alphabit logo"
+                    class="h-40 select-none dark:invert"
+                />
+            </div>
+            <div
+                class="flex flex-col gap-1 text-base font-medium capitalize text-gray-900 dark:text-white"
+            >
+                <p class="my-3 text-lg font-semibold">Quick Links</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+            </div>
+            <div
+                class="flex flex-col gap-1 text-base font-medium capitalize text-gray-900 dark:text-white"
+            >
+                <p class="my-3 text-lg font-semibold">Social</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+                <p>Quick Links</p>
+            </div>
+        </div>
+        <div>
+            <!-- here credit to ch33kaboo and link to the code repo -->
+            this was made by ch33kaboo
+        </div>
     </footer>
 </div>
