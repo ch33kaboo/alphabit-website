@@ -131,10 +131,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex select-none items-center justify-around">
-            <!-- here credit to ch33kaboo and link to the code repo -->
+        <div
+            class="flex cursor-pointer select-none items-center justify-around"
+        >
+            <!-- here credit to ch33kaboo -->
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div
-                class="mt-2 rounded-full border bg-blue-300 bg-opacity-5 px-4 py-2 text-sm sm:text-base"
+                on:click={showModal}
+                class="mt-2 rounded-full border bg-blue-300 bg-opacity-5 px-4 py-2 text-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-900 sm:text-base"
             >
                 Designed & Built with
                 <span
@@ -156,11 +160,7 @@
                         /></svg
                     ></span
                 >
-                by
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <span class="cursor-pointer underline" on:click={showModal}
-                    >ch33kaboo.</span
-                >
+                by ch33kaboo.
             </div>
         </div>
     </footer>
