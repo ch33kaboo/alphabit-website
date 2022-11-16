@@ -26,11 +26,19 @@
                 const r =
                     ($mode == 'dark' ? 64 : 90) +
                     (128 * x) / canvas.width +
-                    64 * Math.sin(t / ($mode == 'dark' ? 1000 : 2000));
+                    64 *
+                        Math.sin(
+                            ($mode == 'dark' ? -1100 : -3700) /
+                                ($mode == 'dark' ? 1000 : 2000)
+                        );
                 const g =
                     ($mode == 'dark' ? 64 : -50) +
-                    (128 * y) / canvas.height +
-                    64 * Math.cos(t / ($mode == 'dark' ? 1000 : 2000));
+                    (128 * x) / canvas.height +
+                    64 *
+                        Math.cos(
+                            ($mode == 'dark' ? -1100 : -3700) /
+                                ($mode == 'dark' ? 1000 : 2000)
+                        );
                 const b = 128;
 
                 imageData.data[p + 0] = r;
