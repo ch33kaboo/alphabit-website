@@ -5,7 +5,6 @@
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log($location.pathname.split('/').filter((n) => n !== ''));
     let handleClick = (route) => {
         let from =
             ($location.state && $location.state.from) ||
