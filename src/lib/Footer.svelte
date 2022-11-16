@@ -57,7 +57,7 @@
                             target="_blank"
                             href="https://facebook.com/AlphaBitClub/"
                             ><svg
-                                class="scale-105 fill-black dark:fill-white"
+                                class="scale-105 fill-black transition-all duration-200 hover:fill-blue-500 dark:fill-white dark:hover:fill-blue-500"
                                 width="35px"
                                 height="35px"
                                 viewBox="0 0 24 24"
@@ -72,7 +72,7 @@
                             target="_blank"
                             href="https://instagram.com/alphabitclub/"
                             ><svg
-                                class="scale-90 fill-black dark:fill-white"
+                                class="scale-90 fill-black transition-all duration-200 hover:fill-blue-500 dark:fill-white dark:hover:fill-blue-500"
                                 version="1.1"
                                 id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
                             target="_blank"
                             href="https://twitter.com/alphabit_club"
                             ><svg
-                                class="fill-black dark:fill-white"
+                                class="fill-black transition-all duration-200 hover:fill-blue-500 dark:fill-white dark:hover:fill-blue-500"
                                 width="35px"
                                 height="35px"
                                 viewBox="0 0 1024 1024"
@@ -117,7 +117,7 @@
                             target="_blank"
                             href="https://dz.linkedin.com/company/alphabit-club"
                             ><svg
-                                class="scale-90 fill-black dark:fill-white"
+                                class="scale-90 fill-black transition-all duration-200 hover:fill-blue-500 dark:fill-white dark:hover:fill-blue-500"
                                 width="35px"
                                 height="35px"
                                 viewBox="0 0 20 20"
@@ -138,12 +138,12 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div
                 on:click={showModal}
-                class="mt-2 rounded-full border bg-blue-300 bg-opacity-5 px-4 py-2 text-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-900 sm:text-base"
+                class="mt-2 rounded-full border border-black bg-blue-300 bg-opacity-5 px-4 py-2 text-sm transition-all hover:-translate-y-[2px] hover:shadow-lg hover:shadow-gray-600 dark:border-white dark:hover:shadow-gray-900 sm:text-base"
             >
                 Designed & Built with
                 <span
                     ><svg
-                        class="inline hover:fill-black dark:hover:fill-white"
+                        class="inline hover:fill-gray-900 dark:hover:fill-white"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
