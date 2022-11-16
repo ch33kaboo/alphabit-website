@@ -1,3 +1,4 @@
+<!-- this is a component to contact the developer "ch33kaboo" -->
 <input type="checkbox" id="my-modal" class="modal-toggle" />
 <div class="modal">
     <div class="modal-box bg-white text-black">

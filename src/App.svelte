@@ -28,7 +28,6 @@
     let showModal = () => {
         const modal = document.getElementById('my-modal');
         modal.checked = true;
-        console.log(modal.checked);
     };
 </script>
 
