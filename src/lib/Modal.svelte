@@ -1,7 +1,7 @@
 <!-- this is a component to contact the developer "ch33kaboo" -->
 <input type="checkbox" id="my-modal" class="modal-toggle" />
 <div class="modal">
-    <div class="modal-box bg-white text-black">
+    <div class="modal-box bg-gray-200 text-black">
         <h3 class="text-lg font-bold">
             If you like this work, you can contact the developer via these
             platforms :
