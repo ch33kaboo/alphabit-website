@@ -1,6 +1,11 @@
 <script>
+    import { Link } from 'svelte-navigator';
+
     // importing assets
     import alphabitLogo from '/src/assets/alphabit_logo_no_text.png';
+
+    // importing configs
+    import routesList from '../config/routesList';
 
     import { createEventDispatcher } from 'svelte';
 
@@ -42,10 +47,13 @@
                     class="flex flex-col gap-1 text-base font-medium capitalize"
                 >
                     <p class="my-3 text-lg font-semibold">Quick Links</p>
-                    <p>Quick Links</p>
-                    <p>Quick Links</p>
-                    <p>Quick Links</p>
-                    <p>Quick Links</p>
+                    {#each routesList as route}
+                        <p
+                            class="cursor-pointer font-bold opacity-80 transition-all hover:translate-x-1 hover:opacity-100"
+                        >
+                            <Link to="/{route.path}">{route.path}</Link>
+                        </p>
+                    {/each}
                 </div>
                 <div
                     class="flex flex-col gap-1 text-base font-medium capitalize"
