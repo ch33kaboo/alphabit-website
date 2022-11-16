@@ -12,6 +12,7 @@
     import Menu from './lib/Menu.svelte';
     import Footer from './lib/Footer.svelte';
     import Modal from './lib/Modal.svelte';
+    import BackToTop from './lib/BackToTop.svelte';
 
     // importing routes
     import About from './routes/About.svelte';
@@ -57,4 +58,6 @@
             <Modal />
         </main>
     </Router>
+
+    <BackToTop />
 {/if}
