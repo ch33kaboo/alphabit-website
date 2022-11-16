@@ -1,9 +1,15 @@
 <script>
     import { fly } from 'svelte/transition';
     import { quintInOut } from 'svelte/easing';
+    import { onMount } from 'svelte';
 
     import AnimatedLogo from '../lib/AnimatedLogo.svelte';
     import Identity from '../lib/Identity.svelte';
+
+    onMount(() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 </script>
 
 <main class="my-10 w-full gap-5 font-semibold lg:grid lg:grid-cols-5">

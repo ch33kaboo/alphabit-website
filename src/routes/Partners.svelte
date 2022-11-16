@@ -1,5 +1,11 @@
 <script>
     import UnderMaintenance from '../lib/UnderMaintenance.svelte';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 </script>
 
 <UnderMaintenance />
