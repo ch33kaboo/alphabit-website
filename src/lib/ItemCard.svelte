@@ -37,7 +37,7 @@
     />
 
     <div
-        class="absolute inset-0 grid grid-cols-10 overflow-hidden rounded-lg bg-indigo-300 text-gray-900 dark:bg-gray-700 dark:text-white"
+        class="absolute inset-0 grid grid-cols-10 overflow-hidden rounded-lg border border-gray-800 bg-indigo-300 text-gray-900 dark:border-0 dark:bg-gray-700 dark:text-white"
     >
         <div
             class="col-span-3 bg-cover"
