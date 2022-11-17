@@ -5,6 +5,7 @@
 
     import AnimatedLogo from '../lib/AnimatedLogo.svelte';
     import Identity from '../lib/Identity.svelte';
+    import ScrollDown from '../lib/ScrollDown.svelte';
 
     onMount(() => {
         document.body.scrollTop = 0;
@@ -70,3 +71,4 @@
         <AnimatedLogo />
     </div>
 </main>
+<ScrollDown />
