@@ -10,14 +10,17 @@
     };
 
     let mybutton;
+    let cursor;
     const scrollFunction = () => {
         if (
             document.body.scrollTop > 50 ||
             document.documentElement.scrollTop > 50
         ) {
             mybutton.style.opacity = '100%';
+            cursor = 'cursor-pointer';
         } else {
             mybutton.style.opacity = '0%';
+            cursor = 'cursor-default';
         }
     };
 </script>
@@ -26,7 +29,7 @@
 <div
     on:click={scrollToTop}
     bind:this={mybutton}
-    class="fixed bottom-[22px] right-3 z-20 inline-block rounded-full bg-cyan-600 p-3 text-xs font-medium leading-tight text-white opacity-0 shadow-md transition duration-300 ease-in-out hover:bg-cyan-700 hover:shadow-lg focus:bg-cyan-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg md:bottom-7 md:right-7"
+    class="fixed bottom-[22px] {cursor} right-3 z-20 inline-block rounded-full bg-cyan-600 p-3 text-xs font-medium leading-tight text-white opacity-0 shadow-md transition duration-300 ease-in-out hover:bg-cyan-700 hover:shadow-lg focus:bg-cyan-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg md:bottom-7 md:right-7"
 >
     <svg
         aria-hidden="true"
