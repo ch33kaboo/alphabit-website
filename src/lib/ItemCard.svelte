@@ -31,7 +31,7 @@
     class="group relative mb-6 grid h-48 transition-all hover:scale-[1.013]"
 >
     <div
-        class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-indigo-800 to-blue-700 opacity-0 blur-xl transition-all {hovered
+        class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-slate-700 to-slate-700 opacity-0 blur-xl transition-all {hovered
             ? 'opacity-70'
             : ''} dark:from-cyan-500 dark:to-green-400"
     />
