@@ -28,7 +28,7 @@
         delay: 200 * item.index + 1000,
         opacity: 0
     }}
-    class="group relative mb-6 grid h-48 transition-all hover:scale-[1.013]"
+    class="group relative -mx-4 mb-6 grid h-[450px] transition-all hover:scale-[1.013] sm:-mx-0 sm:h-48"
 >
     <div
         class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-slate-700 to-slate-700 opacity-0 blur-xl transition-all {hovered
@@ -37,13 +37,15 @@
     />
 
     <div
-        class="absolute inset-0 grid grid-cols-10 overflow-hidden rounded-lg border border-gray-800 bg-indigo-300 text-gray-900 dark:border-0 dark:bg-gray-700 dark:text-white"
+        class="absolute inset-0 flex grid-cols-10 flex-col overflow-hidden rounded-lg border border-gray-800 bg-indigo-300 text-gray-900 dark:border-0 dark:bg-gray-700 dark:text-white sm:grid"
     >
         <div
-            class="col-span-3 bg-cover"
+            class="col-span-3 h-[500px] bg-cover bg-center sm:h-auto"
             style="background-image: url('https://placeimg.com/200/200/tech')"
         />
-        <div class="col-span-7 px-7 py-5">
+        <div
+            class="col-span-7 overflow-x-hidden overflow-y-scroll px-4 py-4 sm:px-7 sm:py-5"
+        >
             <div class="flex items-center justify-between gap-7">
                 <div>
                     <div class="text-3xl capitalize">
@@ -59,7 +61,7 @@
                     on:click={handleClick}
                     on:mouseover={handleHover}
                     on:mouseleave={handleLeave}
-                    class="btn btn-accent"
+                    class="btn btn-accent w-32 leading-5 sm:w-auto sm:leading-normal"
                 >
                     {route == 'blog' ? 'read this blog' : 'read event details'}
                 </div>
