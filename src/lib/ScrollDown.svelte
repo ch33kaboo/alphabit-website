@@ -1,5 +1,8 @@
 <!-- this component will be a button that scrolls back to top when you click it -->
 <script>
+    import { quintInOut } from 'svelte/easing';
+    import { fly } from 'svelte/transition';
+
     let scrolldown = () => {
         document.body.scrollTop += 120;
         document.documentElement.scrollTop += 120;
@@ -8,6 +11,13 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
+    in:fly={{
+        y: 0,
+        duration: 1000,
+        delay: 1500,
+        opacity: 0,
+        easing: quintInOut
+    }}
     on:click={scrolldown}
     class="-mt-16 animate-bounce cursor-pointer rounded-full bg-gradient-to-r from-indigo-800 to-blue-700 p-3 text-xs font-medium text-blue-200 opacity-90 transition duration-300 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg dark:from-cyan-500 dark:to-green-400 dark:text-gray-800 sm:-mt-10"
 >
