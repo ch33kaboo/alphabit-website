@@ -3,7 +3,7 @@
     import underMaintenance from '/src/assets/under_maintenance.png';
 </script>
 
-<div class="relative">
+<div class="relative mx-5 mt-5 -mb-4">
     <div
         class="absolute inset-0 rounded-full bg-slate-600 opacity-50 blur-md"
     />
