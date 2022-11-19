@@ -7,7 +7,7 @@
     const owner = import.meta.env.VITE_OWNER;
 
     import { fly } from 'svelte/transition';
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, onMount } from 'svelte';
     import SvelteMarkdown from 'svelte-markdown'; // to convert markdown to HTML
     import { textEmoji } from 'markdown-to-text-emoji'; // to convert the emoji codes
     import { quintInOut } from 'svelte/easing';
@@ -35,6 +35,13 @@
     const handleLeave = () => {
         hovered = false;
     };
+
+    let imgUrl;
+    onMount(async () => {
+        imgUrl = (await fetchDocument())
+            .split('$$img-end$$')[0]
+            .replace(/\s+/g, ' ');
+    });
 </script>
 
 <div
@@ -57,7 +64,7 @@
     >
         <div
             class="col-span-3 h-[500px] bg-cover bg-center sm:h-auto"
-            style="background-image: url('https://placeimg.com/200/200/tech')"
+            style="background-image: url('{imgUrl}')"
         />
         <div
             class="col-span-7 overflow-x-hidden overflow-y-scroll px-4 py-4 sm:px-7 sm:py-5"
@@ -102,7 +109,11 @@
                     >
                         <SvelteMarkdown
                             source={textEmoji(
-                                doc.split(' ').slice(0, 27).join(' ') +
+                                doc
+                                    .split('$$img-end$$')[1]
+                                    .split(' ')
+                                    .slice(0, 27)
+                                    .join(' ') +
                                     `<span class="text-red-300">.... **click ${
                                         route == 'blog'
                                             ? '`read this blog`'
