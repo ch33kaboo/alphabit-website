@@ -122,8 +122,11 @@
                 >
                     {#if route.path == 'AlphaGeeks'}
                         <span
-                            class="badge indicator-item badge-secondary -top-[6px] right-2 opacity-60 group-hover:opacity-100"
-                            >new</span
+                            class="badge indicator-item badge-secondary -top-[6px] right-2 opacity-60 group-hover:opacity-100 {$location.pathname.startsWith(
+                                `/${route.path}`
+                            )
+                                ? 'opacity-100'
+                                : ''}">new</span
                         >
                     {/if}
                     <li
