@@ -1,8 +1,16 @@
 <script>
     export let item;
     export let route = 'article';
+
+    // importing envars
+    const repo = import.meta.env.VITE_REPO;
+    const owner = import.meta.env.VITE_OWNER;
+
     import { fly } from 'svelte/transition';
     import { createEventDispatcher } from 'svelte';
+    import SvelteMarkdown from 'svelte-markdown'; // to convert markdown to HTML
+    import { textEmoji } from 'markdown-to-text-emoji'; // to convert the emoji codes
+    import { quintInOut } from 'svelte/easing';
     const dispatch = createEventDispatcher();
 
     let handleClick = () => {
@@ -10,6 +18,14 @@
             item: item,
             path: item.path.replace('.md', '')
         });
+    };
+
+    const fetchDocument = async () => {
+        let res = await fetch(
+            `https://raw.githubusercontent.com/${owner}/${repo}/main/${route}/${item.path}`
+        );
+        let content = await res.text();
+        return content;
     };
 
     let hovered = false;
@@ -67,10 +83,37 @@
                 </div>
             </div>
             <div class="mt-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Tempora ad unde, odit alias dicta eius quam praesentium
-                mollitia, similique corrupti maiores libero aperiam, in
-                dignissimos.
+                {#await fetchDocument()}
+                    <div class="flex-grow flex justify-center items-center">
+                        <button class="btn loading"
+                            >loading... please wait</button
+                        >
+                    </div>
+                {:then doc}
+                    <article
+                        in:fly={{
+                            y: 0,
+                            duration: 500,
+                            delay: 0,
+                            opacity: 0,
+                            easing: quintInOut
+                        }}
+                        class="mt-2 prose-code:bg-black prose-code:bg-opacity-20 dark:prose-code:bg-opacity-30 prose-code:rounded-md prose-code:py-1 prose-code:px-2 text-slate-800 dark:text-gray-200"
+                    >
+                        <SvelteMarkdown
+                            source={textEmoji(
+                                doc.split(' ').slice(0, 30).join(' ') +
+                                    `<span class="text-red-300">.... **click ${
+                                        route == 'blog'
+                                            ? '`read this blog`'
+                                            : '`read event details`'
+                                    } button to read more.**</span>`
+                            )}
+                        />
+                    </article>
+                {:catch error}
+                    <p class="text-red-700">{error.message}</p>
+                {/await}
             </div>
         </div>
     </div>
