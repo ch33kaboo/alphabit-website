@@ -102,7 +102,7 @@
                     >
                         <SvelteMarkdown
                             source={textEmoji(
-                                doc.split(' ').slice(0, 30).join(' ') +
+                                doc.split(' ').slice(0, 27).join(' ') +
                                     `<span class="text-red-300">.... **click ${
                                         route == 'blog'
                                             ? '`read this blog`'
@@ -112,7 +112,11 @@
                         />
                     </article>
                 {:catch error}
-                    <p class="text-red-700">{error.message}</p>
+                    <p
+                        class="text-red-700 text-lg font-semibold dark:text-red-300"
+                    >
+                        {error.message}
+                    </p>
                 {/await}
             </div>
         </div>
