@@ -122,6 +122,13 @@
                 >
                     {#if route.path == 'AlphaGeeks'}
                         <span
+                            in:fly={{
+                                y: 10,
+                                duration: 900,
+                                delay: 1600,
+                                opacity: 0,
+                                easing: quintInOut
+                            }}
                             class="badge indicator-item badge-secondary -top-[6px] right-2 opacity-60 group-hover:opacity-100 {$location.pathname.startsWith(
                                 `/${route.path}`
                             )
