@@ -5,6 +5,7 @@ let routes = [
     { path: 'events', index: 0 },
     { path: 'partners', index: 1 },
     { path: 'blog', index: 2 },
-    { path: 'about', index: 3 }
+    { path: 'AlphaGeeks', index: 3 },
+    { path: 'about', index: 4 }
 ];
 export default routes;

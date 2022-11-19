@@ -40,7 +40,7 @@
         }}
         class="rounded-r-2xl bg-indigo-300 py-1 pl-1 pr-2 dark:bg-gray-700 lg:hidden"
     >
-        <label class="swap swap-rotate">
+        <label class="swap-rotate swap">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" />
 
@@ -115,29 +115,41 @@
                 />
             </li>
             {#each routesList as route}
-                <li
-                    in:fly={{
-                        y: -40,
-                        duration: 500,
-                        delay: 380 + route.index * 40,
-                        opacity: 0,
-                        easing: quintInOut
-                    }}
-                    class="group relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname.startsWith(
-                        `/${route.path}`
-                    )
-                        ? 'opacity-100'
-                        : ''} transition-all"
+                <div
+                    class="{route.path == 'AlphaGeeks'
+                        ? 'indicator'
+                        : ''} group"
                 >
-                    <Link to="/{route.path}">{route.path}</Link>
-                    <span
-                        class="absolute -bottom-1 left-0 h-1 {$location.pathname.startsWith(
+                    {#if route.path == 'AlphaGeeks'}
+                        <span
+                            class="badge indicator-item badge-secondary -top-[6px] right-2 opacity-60 group-hover:opacity-100"
+                            >new</span
+                        >
+                    {/if}
+                    <li
+                        in:fly={{
+                            y: -40,
+                            duration: 500,
+                            delay: 380 + route.index * 40,
+                            opacity: 0,
+                            easing: quintInOut
+                        }}
+                        class="relative cursor-pointer px-2 opacity-60 hover:opacity-100 {$location.pathname.startsWith(
                             `/${route.path}`
                         )
-                            ? 'w-full'
-                            : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
-                    />
-                </li>
+                            ? 'opacity-100'
+                            : ''} transition-all"
+                    >
+                        <Link to="/{route.path}">{route.path}</Link>
+                        <span
+                            class="absolute -bottom-1 left-0 h-1 {$location.pathname.startsWith(
+                                `/${route.path}`
+                            )
+                                ? 'w-full'
+                                : 'w-0'}  bg-slate-900 bg-opacity-90 transition-all group-hover:w-full dark:bg-blue-400 dark:bg-opacity-90"
+                        />
+                    </li>
+                </div>
             {/each}
         </ul>
     </div>
