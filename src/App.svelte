@@ -20,6 +20,7 @@
     import Events from './routes/Events.svelte';
     import Home from './routes/Home.svelte';
     import Partners from './routes/Partners.svelte';
+    import AlphaGeeks from './routes/AlphaGeeks.svelte';
 
     let menu = false;
     const toggleMenu = () => {
@@ -52,6 +53,9 @@
             </Route>
             <Route path="/about">
                 <About />
+            </Route>
+            <Route path="/AlphaGeeks">
+                <AlphaGeeks />
             </Route>
 
             <Footer on:showModal={showModal} />
