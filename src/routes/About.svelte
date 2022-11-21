@@ -48,5 +48,5 @@
         <SvelteMarkdown source={textEmoji(doc)} />
     </article>
 {:catch error}
-    <p class="text-red-700">{error.message}</p>
+    <p class="text-red-700 sm:rounded-xl">{error.message}</p>
 {/await}
