@@ -36,7 +36,7 @@
             opacity: 0,
             easing: quintInOut
         }}
-        class="prose bg-blue-200 dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-20 lg:prose-xl prose-p:px-5 prose-img:px-5 prose-video:px-5 prose-headings:px-5 prose-table:scale-90 md:prose-table:scale-100 my-8 
+        class="prose bg-blue-200 dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-20 lg:prose-xl prose-p:px-5 prose-video:px-5 prose-headings:px-5 prose-table:scale-90 md:prose-table:scale-100 my-8 
         text-slate-800 dark:text-gray-200 
         prose-headings:text-slate-800 dark:prose-headings:text-gray-200 
         prose-strong:text-slate-800 dark:prose-strong:text-gray-200 
@@ -48,5 +48,5 @@
         <SvelteMarkdown source={textEmoji(doc)} />
     </article>
 {:catch error}
-    <p class="text-red-700">{error.message}</p>
+    <p class="text-red-700 sm:rounded-xl">{error.message}</p>
 {/await}
