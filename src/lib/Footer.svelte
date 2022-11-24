@@ -57,6 +57,7 @@
                 </div>
                 <div
                     class="flex flex-col gap-1 text-base font-medium capitalize"
+                    id="social"
                 >
                     <p class="my-3 text-lg font-semibold">Social</p>
                     <div class="flex gap-2">
