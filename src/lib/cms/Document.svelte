@@ -3,6 +3,12 @@
     import { textEmoji } from 'markdown-to-text-emoji'; // to convert the emoji codes (:smile: for example) the MD to an HTML emoji code
     import { fly } from 'svelte/transition';
     import { quintInOut } from 'svelte/easing';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 
     // importing envars
     const repo = import.meta.env.VITE_REPO;
