@@ -51,7 +51,7 @@
         delay: 200 * item.index + 1000,
         opacity: 0
     }}
-    class="group relative -mx-4 mb-6 grid h-[450px] transition-all hover:scale-[1.013] sm:-mx-0 sm:h-[210px]"
+    class="group relative -mx-4 mb-6 grid h-[450px] transition-all sm:-mx-0 sm:h-[210px] md:hover:scale-[1.013]"
 >
     <div
         class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-slate-700 to-slate-700 opacity-0 blur-xl transition-all {hovered
