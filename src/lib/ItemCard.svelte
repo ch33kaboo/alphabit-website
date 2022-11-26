@@ -89,7 +89,11 @@
                     on:mouseleave={handleLeave}
                     class="btn btn-accent w-32 leading-5 sm:w-auto sm:leading-normal"
                 >
-                    {route == 'blog' ? 'read this blog' : 'read event details'}
+                    {item.path == 'Important,_please_read!'
+                        ? 'continue reading'
+                        : route == 'blog'
+                        ? 'read this blog'
+                        : 'read event details'}
                 </div>
             </div>
             <div class="mt-4">
@@ -118,12 +122,22 @@
                                     .slice(0, 17)
                                     .join(' ') +
                                     `<span class="text-red-300">.... **click ${
-                                        route == 'blog'
+                                        item.path == 'Important,_please_read!'
+                                            ? '`continue reading`'
+                                            : route == 'blog'
                                             ? '`read this blog`'
                                             : '`read event details`'
                                     } button to read more.**</span>`
                             )}
                         />
+                        <!-- 
+                                                {item.path == 'Important,_please_read!'
+                        ? 'continue reading'
+                        : route == 'blog'
+                        ? 'read this blog'
+                        : 'read event details'}
+
+                         -->
                     </article>
                 {:catch error}
                     <p
