@@ -51,7 +51,7 @@
         delay: 200 * item.index + 1000,
         opacity: 0
     }}
-    class="group relative -mx-4 mb-6 grid h-[450px] transition-all sm:-mx-0 sm:h-[210px] md:hover:scale-[1.013]"
+    class="group relative -mx-4 mb-6 grid h-[450px] transition-all sm:-mx-0 sm:h-[212px] md:hover:scale-[1.013]"
 >
     <div
         class="absolute inset-y-2 -inset-x-1 bg-gradient-to-tr from-slate-700 to-slate-700 opacity-0 blur-xl transition-all {hovered
@@ -63,7 +63,10 @@
         class="absolute inset-0 flex grid-cols-10 flex-col overflow-hidden rounded-lg border border-gray-800 bg-indigo-300 text-gray-900 dark:border-0 dark:bg-gray-700 dark:text-white sm:grid"
     >
         <div
-            class="col-span-3 h-[500px] bg-cover bg-center sm:h-auto"
+            class="col-span-3 h-[500px] bg-center sm:h-auto {item.path ==
+            'Important,_please_read!'
+                ? 'bg-contain bg-no-repeat'
+                : 'bg-cover'}"
             style="background-image: url('{imgUrl}')"
         />
         <div
