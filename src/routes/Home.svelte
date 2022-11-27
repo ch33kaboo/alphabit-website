@@ -6,6 +6,9 @@
     import AnimatedLogo from '../lib/AnimatedLogo.svelte';
     import Identity from '../lib/Identity.svelte';
     import ScrollDown from '../lib/ScrollDown.svelte';
+    import HomeFirstSubSection from '../lib/home_subs/HomeFirstSubSection.svelte';
+    import HomeSecondSubSection from '../lib/home_subs/HomeSecondSubSection.svelte';
+    import HomeThirdSubSection from '../lib/home_subs/HomeThirdSubSection.svelte';
 
     onMount(() => {
         document.body.scrollTop = 0;
@@ -72,3 +75,6 @@
     </div>
 </main>
 <ScrollDown />
+<HomeFirstSubSection />
+<HomeSecondSubSection />
+<HomeThirdSubSection />
