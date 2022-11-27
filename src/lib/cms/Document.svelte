@@ -49,7 +49,13 @@
         prose-code:text-slate-800 prose-code:bg-indigo-300 
         dark:prose-code:text-gray-200 dark:prose-code:bg-gray-900"
     >
-        <SvelteMarkdown source={textEmoji(doc.split('$$img-end$$')[1])} />
+        <SvelteMarkdown
+            source={textEmoji(
+                doc
+                    .replace(doc.split('$$img-end$$')[0], '')
+                    .replace('$$img-end$$', '') // with these replace methods I am trying to remove the first part of the string which is the image URL, because it is not part of the document
+            )}
+        />
     </article>
 {:catch error}
     <p class="text-red-700 text-lg font-semibold dark:text-red-300">
