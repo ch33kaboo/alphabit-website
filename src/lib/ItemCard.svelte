@@ -64,7 +64,7 @@
     >
         <div
             class="col-span-3 h-[500px] bg-center sm:h-auto {item.path ==
-            'Important,_please_read!'
+            'Important,_please_read!.md'
                 ? 'bg-contain bg-no-repeat'
                 : 'bg-cover'}"
             style="background-image: url('{imgUrl}')"
@@ -89,7 +89,7 @@
                     on:mouseleave={handleLeave}
                     class="btn btn-accent w-32 leading-5 sm:w-auto sm:leading-normal"
                 >
-                    {item.path == 'Important,_please_read!'
+                    {item.path == 'Important,_please_read!.md'
                         ? 'continue reading'
                         : route == 'blog'
                         ? 'read this blog'
@@ -122,7 +122,8 @@
                                     .slice(0, 17)
                                     .join(' ') +
                                     `<span class="text-red-300">.... **click ${
-                                        item.path == 'Important,_please_read!'
+                                        item.path ==
+                                        'Important,_please_read!.md'
                                             ? '`continue reading`'
                                             : route == 'blog'
                                             ? '`read this blog`'
@@ -130,14 +131,6 @@
                                     } button to read more.**</span>`
                             )}
                         />
-                        <!-- 
-                                                {item.path == 'Important,_please_read!'
-                        ? 'continue reading'
-                        : route == 'blog'
-                        ? 'read this blog'
-                        : 'read event details'}
-
-                         -->
                     </article>
                 {:catch error}
                     <p
