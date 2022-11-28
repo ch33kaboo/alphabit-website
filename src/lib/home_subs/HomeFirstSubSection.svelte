@@ -1,23 +1,47 @@
+<script>
+    import { Link } from 'svelte-navigator';
+</script>
+
 <div
-    class="mt-12 flex w-full flex-col items-stretch justify-around md:flex-row"
+    class="mt-12 flex w-full flex-col items-center justify-around gap-5 md:flex-row md:gap-0"
 >
     <div
-        class="flex max-w-[40%] flex-col items-center justify-center gap-2 text-center text-lg font-semibold"
+        class="flex max-w-[94%] flex-col items-center justify-center gap-2 text-center text-lg font-semibold italic  text-gray-700 dark:text-gray-300 md:max-w-[40%]"
     >
-        <div class="mb-2 text-2xl font-bold">AlphaBit Club</div>
-        <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
-            pariatur libero sit asperiores recusandae nostrum architecto animi
-            harum placeat omnis eos, minus delectus ducimus et quas, doloribus
-            cumque porro quam!
+        <div
+            class="relative mb-2 text-3xl font-bold text-gray-800 dark:text-gray-200"
+        >
+            <div
+                class="absolute mb-2 bg-indigo-700 bg-clip-text text-3xl font-bold text-transparent blur-sm dark:bg-blue-600"
+            >
+                AlphaBit Members
+            </div>
+            <div class="relative">AlphaBit Members</div>
         </div>
         <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eos
-            repellat adipisci magni in.
+            Alphabit Club, like any other community, is build around people.
+        </div>
+        <div>
+            And we appreciate what our members are doing. The hard work they put
+            in the club, The valuable time they dedicate, The joy they create,
+            The creative things they make... from workshops to podcasts, & of
+            course the greate events they organize.
+        </div>
+        <div>
+            Speaking about events, you can take a look at AlphaBit yearly events
+            via <Link to="/events"
+                ><span class="underline">this&nbsp;link</span></Link
+            >.
+        </div>
+        <div>
+            Or listen to our brand new program "AlphaGeeks" via <Link
+                to="/AlphaGeeks"
+                ><span class="underline">this&nbsp;link</span></Link
+            >.
         </div>
     </div>
 
-    <div class="w-5/12 p-1">
+    <div class="w-[95%] p-1 md:w-5/12">
         <div
             class="group relative block overflow-hidden rounded-lg border border-gray-800 transition-all duration-500"
         >
@@ -41,7 +65,7 @@
                     AlphaBit members &hearts;
                 </div>
                 <p class="text-slate-400">
-                    picture taken on november 5th 2022, on the occasion of
+                    A picture taken on november 5th 2022, on the occasion of
                     AlphaBit first general meeting.
                 </p>
             </div>
