@@ -64,7 +64,7 @@
     >
         <div
             class="col-span-3 h-[500px] bg-center sm:h-auto {item.path ==
-            'Important,_please_read!.md' || item.path == 'alpha_CTF.md' || item.path == 'startup_weekend.md'
+            ' Important,_please_read!.md' || item.path == 'Important,_please_read!.md' || item.path == 'alpha_CTF.md' || item.path == 'startup_weekend.md'
                 ? 'bg-contain bg-no-repeat'
                 : 'bg-cover'}"
             style="background-image: url('{imgUrl}')"
