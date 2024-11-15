@@ -5,7 +5,7 @@
   Alphabit Club website
 </h1>
 <p align="center">
-  unofficial website for <a href="https://www.facebook.com/AlphaBitClub" target="_blank">Alphabit Club</a> built with <a href="https://svelte.dev/" target="_blank">Svelte</a>
+  unofficial website for <a href="https://www.alphabit.club/" target="_blank">Alphabit Club</a> built with <a href="https://svelte.dev/" target="_blank">Svelte</a>
 </p>
 <p align="center">
   <a href="https://alphabit.netlify.app/" target="_blank">

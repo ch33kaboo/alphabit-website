@@ -64,7 +64,7 @@
                         <!-- svelte-ignore security-anchor-rel-noreferrer -->
                         <a
                             target="_blank"
-                            href="https://facebook.com/AlphaBitClub/"
+                            href="https://www.facebook.com/profile.php?id=100089682379294"
                             ><svg
                                 class="scale-105 fill-black transition-all duration-200 hover:fill-blue-500 dark:fill-white dark:hover:fill-blue-500"
                                 width="35px"
